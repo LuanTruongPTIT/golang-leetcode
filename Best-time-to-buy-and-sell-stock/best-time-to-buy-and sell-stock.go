@@ -8,6 +8,8 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 */
 package main
 
+import "fmt"
+
 func max(a int, b int) int {
 	if a < b {
 		return b
@@ -32,5 +34,6 @@ func maxProfit(prices []int) int {
 }
 
 func main() {
-	maxProfit([]int{7, 1, 5, 6, 10})
+	a := maxProfit([]int{7, 1, 5, 6, 10})
+	fmt.Println(a) // 5git
 }
