@@ -8,6 +8,29 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 */
 package main
 
-func main() {
+func max(a int, b int) int {
+	if a < b {
+		return b
+	}
+	return a
+}
+func maxProfit(prices []int) int {
+	// var left int = 0
+	maxProfit := 0
+	if len(prices) == 0 {
+		return 0
+	}
+	var minPrices int = prices[0]
+	for i := 1; i < len(prices); i++ {
+		if prices[i] < minPrices {
+			minPrices = prices[i]
+		} else {
+			max(maxProfit, prices[i]-minPrices)
+		}
+	}
+	return maxProfit
+}
 
+func main() {
+	maxProfit([]int{7, 1, 5, 6, 10})
 }
