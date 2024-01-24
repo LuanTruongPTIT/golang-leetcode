@@ -35,5 +35,5 @@ func maxProfit(prices []int) int {
 
 func main() {
 	a := maxProfit([]int{7, 1, 5, 6, 10})
-	fmt.Println(a) // 5git
+	fmt.Println(a) // 5
 }

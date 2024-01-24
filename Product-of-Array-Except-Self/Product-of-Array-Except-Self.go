@@ -17,4 +17,26 @@ Output: [0,0,9,0,0]
 */
 package main
 
-func main() {}
+import (
+	"fmt"
+)
+
+func productExceptSelf(nums []int) []int {
+	size := len(nums)
+	res := make([]int, size)
+	var leftMult int = 1
+	var rightMult int = 1
+	for i := size - 1; i >= 0; i-- {
+		res[i] = rightMult
+		rightMult *= nums[i]
+	}
+	for j := 0; j < size; j++ {
+		res[j] *= leftMult
+		leftMult *= nums[j]
+	}
+	return res
+}
+func main() {
+	arr := productExceptSelf([]int{1, 2, 3, 4})
+	fmt.Println(arr)
+}
