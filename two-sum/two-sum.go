@@ -7,8 +7,6 @@ import (
 func twosum(nums []int, target int) []int {
 	m := make(map[int]int)
 	for k, v := range nums {
-		c, l := m[target-v]
-		fmt.Println(c, l)
 		if idx, ok := m[target-v]; ok {
 			return []int{idx, k}
 		}
