@@ -3,11 +3,17 @@ package main
 import "fmt"
 
 /*
- * s = "cbaebabacd"
- * p = "abc"
- * s1 = "abab"
- * p1= "ab"
- */
+Truong Dinh Kim Luan
+Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
+
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+
+The order of output does not matter.
+  - s = "cbaebabacd"
+  - p = "abc"
+  - s1 = "abab"
+  - p1= "ab"
+*/
 func findAnagrams(s string, p string) []int {
 	right, left, output, count := 0, 0, []int{}, len(p)
 	var freq [256]int
