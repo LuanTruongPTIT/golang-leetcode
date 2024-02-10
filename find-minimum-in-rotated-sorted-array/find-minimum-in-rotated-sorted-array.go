@@ -16,5 +16,5 @@ func findMins(nums []int) int {
 	return nums[low]
 }
 func main() {
-	fmt.Println(findMins([]int{3, 4, 5, 1, 2})) // 1
+	fmt.Println(findMins([]int{3, 4, 5, 1, 2})) // 1 lens = 4 mid = 2 nums[2] = 5
 }
